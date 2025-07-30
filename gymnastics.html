@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/png" href="icon.png" />
+  <title>Gymnastics Coaching - P. Muneeswari</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Times New Roman", serif;
+      background-color: black;
+      color: white;
+      overflow-x: hidden;
+    }
+    nav {
+      background-color: rgba(0, 0, 0, 0.85);
+      padding: 15px 20px;
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      border-bottom: 2px solid #66b2ff;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin: 0; padding: 0;
+    }
+    nav ul li a {
+      color: #66b2ff;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1em;
+      transition: color 0.3s ease;
+    }
+    nav ul li a:hover {
+      color: #99ccff;
+      text-decoration: underline;
+    }
+    main {
+      max-width: 900px;
+      margin: 100px auto 50px;
+      padding: 30px 40px;
+      background-color: rgba(0,0,0,0.75);
+      border-radius: 10px;
+      box-shadow: 0 0 15px #66b2ff;
+    }
+    h1 {
+      color: #66b2ff;
+      font-size: 3em;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    section {
+      margin-bottom: 30px;
+      font-size: 1.2em;
+      line-height: 1.6;
+    }
+    ul {
+      list-style-type: square;
+      margin-left: 20px;
+      margin-top: 10px;
+    }
+    .quote {
+      margin-top: 40px;
+      font-style: italic;
+      color: #99ccff;
+      border-left: 4px solid #66b2ff;
+      padding-left: 15px;
+      text-align: center;
+      font-size: 1.1em;
+    }
+
+    /* Gallery styles */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill,minmax(150px,1fr));
+      gap: 15px;
+      margin-top: 40px;
+    }
+    .gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      border: 2px solid #66b2ff;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+      border-color: #99ccff;
+    }
+
+    @media(max-width: 600px){
+      main {
+        margin: 90px 20px 30px;
+        padding: 20px;
+      }
+      h1 {
+        font-size: 2.2em;
+      }
+      section {
+        font-size: 1em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Me</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="gymnastics.html">Gymnastics Coaching</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="resume.html">Resume</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h1>Gymnastics Coaching</h1>
+    <section>
+      <p>I have gained valuable experience coaching gymnastics in two institutions:</p>
+      <ul>
+        <li><strong>Wisdom CBSE School</strong> – 1 year coaching young children</li>
+        <li><strong>Sri Ganesar School</strong> – 6 months coaching with respect and dedication</li>
+      </ul>
+      <p>My coaching philosophy emphasizes discipline, strength, and building confidence through consistent practice and encouragement.</p>
+    </section>
+
+    <section class="quote">
+      "Strength does not come from physical capacity. It comes from an indomitable will." – Mahatma Gandhi
+    </section>
+
+    <section class="gallery">
+      <!-- Replace src with your actual image paths -->
+      <img src="GYmnastics.jpg" alt="Gymnastics coaching 1" />
+      <img src="Karate5.jpg" alt="Gymnastics coaching 2" />
+      <img src="Munis.grading event.jpg" alt="Gymnastics coaching 3" />
+      <img src="images/gym4.jpg" alt="Gymnastics coaching 4" />
+      <img src="images/gym5.jpg" alt="Gymnastics coaching 5" />
+      <img src="images/gym6.jpg" alt="Gymnastics coaching 6" />
+      <!-- Add more images as needed -->
+    </section>
+  </main>
+
+</body>
+</html>
