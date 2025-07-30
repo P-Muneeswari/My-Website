@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/png" href="icon.png" />
+  <title>Projects - P. Muneeswari</title>
+  <style>
+    body {
+      margin: 0; font-family: "Times New Roman", serif;
+      background-color: black; color: white;
+      overflow-x: hidden;
+    }
+    nav {
+      background-color: #000;
+      padding: 15px 20px;
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      border-bottom: 2px solid #66b2ff;
+    }
+    nav ul {
+      list-style: none;
+      margin: 0; padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+    }
+    nav ul li a {
+      color: #66b2ff;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+    nav ul li a:hover {
+      color: #99ccff;
+      text-decoration: underline;
+    }
+    main {
+      max-width: 900px;
+      margin: 100px auto 50px;
+      padding: 0 20px;
+    }
+    h1 {
+      color: #66b2ff;
+      font-size: 3em;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    section.project {
+      margin-bottom: 40px;
+      padding: 20px;
+      border-left: 6px solid #66b2ff;
+      background-color: #111;
+      border-radius: 6px;
+    }
+    section.project h2 {
+      color: #99ccff;
+      margin-bottom: 10px;
+    }
+    section.project p, section.project ul {
+      font-size: 1.1em;
+      line-height: 1.5;
+    }
+    section.project ul {
+      padding-left: 20px;
+      list-style-type: square;
+      margin-top: 10px;
+    }
+    .tools {
+      margin-top: 15px;
+      font-style: italic;
+      color: #a0c4ff;
+    }
+    a.btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 8px 16px;
+      background-color: #66b2ff;
+      color: black;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+    a.btn:hover {
+      background-color: #99ccff;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Me</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="gymnastics.html">Gymnastics Coaching</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="resume.html">Resume</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h1>My Projects</h1>
+
+    <section class="project">
+      <h2>Student Performance Dashboard</h2>
+      <p>A data analysis and visualization project using Excel and Power BI to track and display student marks, attendance, and overall performance.</p>
+      <p class="tools">Tools & Technologies: Excel, Power BI, Data Visualization</p>
+      <!-- Add links or images here if available -->
+    </section>
+
+    <section class="project">
+      <h2>Online Course Finder Website</h2>
+      <p>A full stack web application that helps users search and filter online courses by category, price, and ratings.</p>
+      <p class="tools">Tools & Technologies: HTML, CSS, JavaScript, Python (Flask/Django)</p>
+      <!-- Add links or images here if available -->
+    </section>
+
+    <section class="project">
+      <h2>DevOps Portfolio Deployment</h2>
+      <p>A DevOps project deploying my portfolio website using CI/CD pipelines with GitHub Actions and hosting on Heroku.</p>
+      <p class="tools">Tools & Technologies: GitHub Actions, CI/CD, Heroku, Docker</p>
+      <!-- Add links or images here if available -->
+    </section>
+
+  </main>
+</body>
+</html>

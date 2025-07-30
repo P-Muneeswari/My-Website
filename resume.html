@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/png" href="icon.png" />
+  <title>Resume - P. Muneeswari</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Times New Roman", serif;
+      background-color: black;
+      color: white;
+      overflow-x: hidden;
+    }
+    nav {
+      background-color: rgba(0, 0, 0, 0.85);
+      padding: 15px 20px;
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      border-bottom: 2px solid #66b2ff;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin: 0; padding: 0;
+    }
+    nav ul li a {
+      color: #66b2ff;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1em;
+      transition: color 0.3s ease;
+    }
+    nav ul li a:hover {
+      color: #99ccff;
+      text-decoration: underline;
+    }
+    main {
+      max-width: 900px;
+      margin: 100px auto 50px;
+      padding: 30px 40px;
+      background-color: rgba(0,0,0,0.75);
+      border-radius: 10px;
+      box-shadow: 0 0 15px #66b2ff;
+    }
+    h1 {
+      color: #66b2ff;
+      font-size: 3em;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    .download-btn {
+      display: inline-block;
+      background-color: #66b2ff;
+      color: black;
+      padding: 12px 24px;
+      border-radius: 6px;
+      font-weight: bold;
+      text-decoration: none;
+      margin-bottom: 30px;
+      transition: background-color 0.3s ease;
+    }
+    .download-btn:hover {
+      background-color: #99ccff;
+    }
+    .resume-content {
+      font-size: 1.1em;
+      line-height: 1.6;
+      color: white;
+    }
+    .section {
+      margin-bottom: 30px;
+    }
+    .section h2 {
+      color: #66b2ff;
+      border-bottom: 2px solid #66b2ff;
+      padding-bottom: 8px;
+      margin-bottom: 15px;
+    }
+    ul {
+      list-style: square;
+      margin-left: 20px;
+    }
+    @media(max-width: 600px){
+      main {
+        margin: 90px 20px 30px;
+        padding: 20px;
+      }
+      h1 {
+        font-size: 2.2em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Me</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="gymnastics.html">Gymnastics Coaching</a></li>
+      <li><a href="videos.html">Videos</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="resume.html">Resume</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h1>Resume</h1>
+
+    <a href="resume.pdf" class="download-btn" download>Download Resume (PDF)</a>
+
+    <div class="resume-content">
+      <div class="section">
+        <h2>Education</h2>
+        <p><strong>Bachelor of Engineering (BE)</strong>, Dr. G.U. Pope College of Engineering</p>
+      </div>
+
+      <div class="section">
+        <h2>Technical Skills</h2>
+        <ul>
+          <li>Python Full Stack Development</li>
+          <li>GitHub & Version Control</li>
+          <li>Docker & Containerization</li>
+          <li>Linux Basics</li>
+          <li>MySQL & Database Management</li>
+          <li>Web Development (HTML, CSS, JavaScript)</li>
+          <li>DevOps basics & CI/CD pipelines</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>Projects</h2>
+        <ul>
+          <li><strong>Student Performance Dashboard:</strong> Data visualization using Excel and Power BI</li>
+          <li><strong>Online Course Finder Website:</strong> Full stack website using HTML, CSS, JS, and Python backend</li>
+          <li><strong>DevOps Portfolio Deployment:</strong> CI/CD setup with GitHub Actions and deployment on Heroku</li>
+          <li><strong>Log Monitoring Dashboard:</strong> Docker and Jenkins based project for log analysis</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>Gymnastics Coaching & Martial Arts</h2>
+        <ul>
+          <li>Gymnastics Coach at Wisdom CBSE School (1 year)</li>
+          <li>Gymnastics Coach at Sri Ganesar School (6 months)</li>
+          <li>Karate Brown Belt – Martial Arts training and discipline</li>
+          <li>Organizer at Master RK’s Flying Squad Academy</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+</body>
+</html>
