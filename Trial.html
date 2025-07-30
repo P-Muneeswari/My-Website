@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="icon.png" />
+  <title>P. Muneeswari Portfolio - Home</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: "Times New Roman", serif;
+      background-color: black;
+      color: white;
+      overflow-x: hidden;
+    }
+
+    nav {
+      background-color: #000;
+      padding: 15px 20px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      /* Note: 'c: \Users\MuneeswariEsther\OneDrive\Desktop\Esther website\Munis.png z-index: 1000;' looks like a mistake, so removed */
+      z-index: 1000;
+      border-bottom: 2px solid #66b2ff;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    nav ul li a {
+      color: #66b2ff;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+
+    nav ul li a:hover {
+      color: #99ccff;
+      text-decoration: underline;
+    }
+
+    .hero-section {
+      position: relative;
+      height: 100vh;
+      max-width: 1000px;
+      margin: 70px auto 0 auto;
+      /* margin top for nav */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 50px;
+      padding: 0 20px;
+      box-sizing: border-box;
+    }
+
+    .text-content {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 30px 40px;
+      border-radius: 10px;
+      max-width: 500px;
+      color: white;
+      text-align: left;
+      backdrop-filter: blur(4px);
+      box-sizing: border-box;
+    }
+
+    .text-content h1 {
+      font-size: 3.5em;
+      color: #66b2ff;
+      margin: 0 0 20px 0;
+    }
+
+    .welcome-msg {
+      margin: 0 0 20px 0;
+      font-size: 1.3em;
+      color: #ddd;
+      font-style: italic;
+    }
+
+    .tagline {
+      font-size: 1.5em;
+      margin: 0 0 20px 0;
+      color: #007bff;
+      font-weight: bold;
+      display: inline-block;
+      min-height: 40px;
+    }
+
+    .cursor {
+      animation: blink 1s infinite;
+      font-weight: bold;
+      font-size: 1.5em;
+      color: #66b2ff;
+      vertical-align: bottom;
+      margin-left: 3px;
+      display: inline-block;
+    }
+
+    .bible-verse,
+    .quote {
+      color: #66b2ff;
+      opacity: 0.8;
+      font-style: italic;
+      margin-top: 15px;
+      font-size: 1em;
+    }
+
+    .main-img {
+      width: 450px;
+      max-height: 400px;
+      border-radius: 15px;
+      object-fit: contain;
+      /* Always have a bright glow */
+      box-shadow: 0 0 30px 5px rgba(102, 178, 255, 0.7);
+      transition: transform 0.3s ease;
+    }
+
+    .main-img:hover {
+      transform: scale(1.05);
+      /* Slightly stronger glow on hover */
+      box-shadow: 0 0 40px 8px rgba(102, 178, 255, 0.9);
+    }
+
+    @keyframes blink {
+      0%,
+      100% {
+        opacity: 1;
+      }
+
+      50% {
+        opacity: 0;
+      }
+    }
+
+    /* Responsive for screens smaller than 900px - existing */
+    /* 1. Set viewport meta tag (you already have this) */
+/* 2. Scale entire page on small screens without layout changes */
+
+@media (max-width: 768px) {
+  body {
+    transform-origin: top left;
+    transform: scale(0.75);   /* scale down page to 75% */
+    width: 133.33vw;           /* 100 / 0.75 = 133.33 to prevent horizontal cutoff */
+    overflow-x: auto;          /* allow horizontal scroll if needed */
+    -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */
+  }
+
+  /* Optional: Increase nav padding so links aren't too small */
+  nav ul li a {
+    font-size: 1.2em;
+  }
+}
+
+    @media (max-width: 900px) {
+      .hero-section {
+        flex-direction: column;
+        height: auto;
+        margin-top: 60px;
+        gap: 30px;
+      }
+
+      .text-content,
+      .main-img {
+        max-width: 90%;
+        width: 100%;
+      }
+
+      .text-content h1 {
+        font-size: 2.8em;
+      }
+
+      .tagline {
+        font-size: 1.2em;
+      }
+
+      .main-img {
+        max-height: 300px;
+      }
+    }
+
+    /* New: Scale entire page on small screens without changing layout */
+    @media (max-width: 768px) {
+      body {
+        transform-origin: top left;
+        transform: scale(0.7);
+        width: 142.8vw; /* 100 / 0.7 = ~142.8 */
+        overflow-x: auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Me</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="Karate_acievements.html">Karate Achievements</a></li>
+      <li><a href="gymnastics.html">Gymnastics Coaching</a></li>
+      <li><a href="mentors.html">Inspirations</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="resume.html">Resume</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero-section" aria-label="Hero section with introduction and image">
+    <div class="text-content" role="region" aria-live="polite">
+      <h1>P. Muneeswari</h1>
+      <p class="welcome-msg">Welcome to my professional portfolio, where technology meets discipline and passion.</p>
+      <p class="tagline"><span id="typed-text"></span><span class="cursor">|</span></p>
+      <p class="bible-verse">"I can do all things through Christ who strengthens me." – Philippians 4:13</p>
+      <p class="quote">"The strength of the warrior is not in the weapon but in the spirit."</p>
+    </div>
+
+    <img src="2D_08847.JPG" alt="Main portfolio image" class="main-img" />
+  </section>
+
+  <script>
+    const taglines = [
+      "DevOps Enthusiast | Gymnastics Coach "
+    ];
+
+    let index = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    const typedText = document.getElementById('typed-text');
+
+    function type() {
+      const currentText = taglines[index];
+
+      if (isDeleting) {
+        if (charIndex > 0) charIndex--;
+        typedText.textContent = currentText.substring(0, charIndex);
+      } else {
+        if (charIndex < currentText.length) charIndex++;
+        typedText.textContent = currentText.substring(0, charIndex);
+      }
+
+      if (!isDeleting && charIndex === currentText.length) {
+        isDeleting = true;
+        setTimeout(type, 2000);
+      } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        setTimeout(type, 500);
+      } else {
+        setTimeout(type, isDeleting ? 50 : 100);
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      type();
+    });
+  </script>
+</body>
+
+</html>
