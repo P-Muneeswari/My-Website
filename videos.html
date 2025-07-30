@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/png" href="icon.png" />
+  <link rel="icon" type="image/png" href="icon.png" />
+  <title>Videos - P. Muneeswari</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Times New Roman", serif;
+      background-color: black;
+      color: white;
+      overflow-x: hidden;
+    }
+
+    nav {
+      background-color: rgba(0, 0, 0, 0.85);
+      padding: 15px 20px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      border-bottom: 2px solid #66b2ff;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li a {
+      color: #66b2ff;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1em;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #99ccff;
+      text-decoration: underline;
+    }
+
+    main {
+      max-width: 600px;
+      margin: 100px auto 50px;
+      padding: 30px 40px;
+      background-color: rgba(0, 0, 0, 0.75);
+      border-radius: 10px;
+      box-shadow: 0 0 15px #66b2ff;
+    }
+
+    h1 {
+      color: #66b2ff;
+      font-size: 3em;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .video-section {
+      margin-bottom: 40px;
+    }
+
+    video,
+    iframe {
+      width: 100%;
+      height: auto;
+      border: 2px solid #66b2ff;
+      border-radius: 8px;
+      margin-bottom: 25px;
+      display: block;
+    }
+
+    /* Responsive iframe container for YouTube */
+    .iframe-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      max-width: 100%;
+    }
+
+    .iframe-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 8px;
+    }
+
+    @media(max-width: 600px) {
+      main {
+        margin: 90px 20px 30px;
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 2.2em;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Me</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="gymnastics.html">Gymnastics Coaching</a></li>
+      <li><a href="videos.html">Videos</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="resume.html">Resume</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h1>Coaching Videos</h1>
+
+    <section class="video-section">
+      <h2 style="color:#66b2ff; margin-bottom:15px;">Local Videos</h2>
+      <video controls>
+        <source src="Sri_Ganesar.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <video controls>
+        <source src="Wisdom.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </section>
+
+    <section class="video-section">
+
+      <video controls>
+        <source src="Wisdom2.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <video controls>
+        <source src="wisdom3.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </section>
+  </main>
+
+</body>
+
+</html>
