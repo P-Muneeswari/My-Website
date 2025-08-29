@@ -22,7 +22,7 @@
       top: 0;
       left: 0;
       right: 0;
-      c: \Users\MuneeswariEsther\OneDrive\Desktop\Esther website\Munis.png z-index: 1000;
+      z-index: 1000;
       border-bottom: 2px solid #66b2ff;
     }
 
@@ -32,7 +32,8 @@
       padding: 0;
       display: flex;
       justify-content: center;
-      gap: 30px;
+      flex-wrap: wrap;
+      gap: 20px;
     }
 
     nav ul li a {
@@ -49,16 +50,16 @@
 
     .hero-section {
       position: relative;
-      height: 100vh;
-      max-width: 1000px;
+      min-height: 100vh;
+      max-width: 1200px;
       margin: 70px auto 0 auto;
-      /* margin top for nav */
       display: flex;
       justify-content: center;
       align-items: center;
       gap: 50px;
-      padding: 0 20px;
+      padding: 20px;
       box-sizing: border-box;
+      flex-wrap: wrap;
     }
 
     .text-content {
@@ -118,29 +119,16 @@
       max-height: 400px;
       border-radius: 15px;
       object-fit: contain;
-      /* Always have a bright glow */
       box-shadow: 0 0 30px 5px rgba(102, 178, 255, 0.7);
-      transition: transform 0.3s ease;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .main-img:hover {
       transform: scale(1.05);
-      /* Slightly stronger glow on hover */
       box-shadow: 0 0 40px 8px rgba(102, 178, 255, 0.9);
     }
 
-    .cursor {
-      animation: blink 1s infinite;
-      font-weight: bold;
-      font-size: 1.5em;
-      color: #66b2ff;
-      vertical-align: bottom;
-      margin-left: 3px;
-      display: inline-block;
-    }
-
     @keyframes blink {
-
       0%,
       100% {
         opacity: 1;
@@ -152,12 +140,26 @@
     }
 
     /* Responsive */
+    @media (max-width: 1024px) {
+      .hero-section {
+        gap: 30px;
+      }
+      .main-img {
+        max-height: 350px;
+      }
+    }
+
     @media (max-width: 900px) {
       .hero-section {
         flex-direction: column;
-        height: auto;
         margin-top: 60px;
         gap: 30px;
+        padding: 10px;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
       }
 
       .text-content,
@@ -176,6 +178,28 @@
 
       .main-img {
         max-height: 300px;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .text-content {
+        padding: 20px;
+      }
+
+      .text-content h1 {
+        font-size: 2.2em;
+      }
+
+      .welcome-msg {
+        font-size: 1.1em;
+      }
+
+      .tagline {
+        font-size: 1em;
+      }
+
+      .main-img {
+        max-height: 250px;
       }
     }
   </style>
@@ -209,7 +233,7 @@
 
   <script>
     const taglines = [
-       "DevOps Enthusiast | Gymnastics Coach "
+      "DevOps Enthusiast | Gymnastics Coach "
     ];
 
     let index = 0;
