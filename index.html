@@ -24,6 +24,15 @@
       right: 0;
       z-index: 1000;
       border-bottom: 2px solid #66b2ff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav .logo {
+      font-size: 1.3em;
+      font-weight: bold;
+      color: #66b2ff;
     }
 
     nav ul {
@@ -31,8 +40,6 @@
       margin: 0;
       padding: 0;
       display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
       gap: 20px;
     }
 
@@ -48,6 +55,45 @@
       text-decoration: underline;
     }
 
+    /* Hamburger button */
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .menu-toggle span {
+      width: 25px;
+      height: 3px;
+      background: #66b2ff;
+      margin: 4px 0;
+      transition: 0.3s;
+    }
+
+    /* Responsive styles */
+    @media (max-width: 900px) {
+      nav ul {
+        display: none;
+        flex-direction: column;
+        background: #000;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        padding: 15px 0;
+        border-top: 1px solid #66b2ff;
+      }
+
+      nav ul.show {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+    }
+
+    /* Hero Section */
     .hero-section {
       position: relative;
       min-height: 100vh;
@@ -133,51 +179,8 @@
       100% {
         opacity: 1;
       }
-
       50% {
         opacity: 0;
-      }
-    }
-
-    /* Responsive */
-    @media (max-width: 1024px) {
-      .hero-section {
-        gap: 30px;
-      }
-      .main-img {
-        max-height: 350px;
-      }
-    }
-
-    @media (max-width: 900px) {
-      .hero-section {
-        flex-direction: column;
-        margin-top: 60px;
-        gap: 30px;
-        padding: 10px;
-      }
-
-      nav ul {
-        flex-direction: column;
-        gap: 10px;
-      }
-
-      .text-content,
-      .main-img {
-        max-width: 90%;
-        width: 100%;
-      }
-
-      .text-content h1 {
-        font-size: 2.8em;
-      }
-
-      .tagline {
-        font-size: 1.2em;
-      }
-
-      .main-img {
-        max-height: 300px;
       }
     }
 
@@ -207,7 +210,13 @@
 
 <body>
   <nav>
-    <ul>
+    <div class="logo">Menu</div>
+    <div class="menu-toggle" id="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul id="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About Me</a></li>
       <li><a href="projects.html">Projects</a></li>
@@ -232,10 +241,16 @@
   </section>
 
   <script>
-    const taglines = [
-      "DevOps Enthusiast | Gymnastics Coach "
-    ];
+    // Hamburger menu toggle
+    const menuToggle = document.getElementById("menu-toggle");
+    const navLinks = document.getElementById("nav-links");
 
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("show");
+    });
+
+    // Typing effect
+    const taglines = ["DevOps Enthusiast | Gymnastics Coach "];
     let index = 0;
     let charIndex = 0;
     let isDeleting = false;
@@ -243,7 +258,6 @@
 
     function type() {
       const currentText = taglines[index];
-
       if (isDeleting) {
         if (charIndex > 0) charIndex--;
         typedText.textContent = currentText.substring(0, charIndex);
@@ -251,7 +265,6 @@
         if (charIndex < currentText.length) charIndex++;
         typedText.textContent = currentText.substring(0, charIndex);
       }
-
       if (!isDeleting && charIndex === currentText.length) {
         isDeleting = true;
         setTimeout(type, 2000);
@@ -262,11 +275,9 @@
         setTimeout(type, isDeleting ? 50 : 100);
       }
     }
-
     document.addEventListener("DOMContentLoaded", () => {
       type();
     });
   </script>
 </body>
-
 </html>
