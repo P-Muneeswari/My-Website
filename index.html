@@ -13,6 +13,7 @@
       background-color: black;
       color: white;
       overflow-x: hidden;
+      scroll-behavior: smooth; /* smooth scrolling */
     }
 
     nav {
@@ -93,19 +94,24 @@
       }
     }
 
+    /* Sections */
+    section {
+      padding: 100px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+      box-sizing: border-box;
+    }
+
     /* Hero Section */
     .hero-section {
       position: relative;
       min-height: 100vh;
-      max-width: 1200px;
-      margin: 70px auto 0 auto;
       display: flex;
       justify-content: center;
       align-items: center;
       gap: 50px;
-      padding: 20px;
-      box-sizing: border-box;
       flex-wrap: wrap;
+      padding-top: 70px;
     }
 
     .text-content {
@@ -179,6 +185,7 @@
       100% {
         opacity: 1;
       }
+
       50% {
         opacity: 0;
       }
@@ -205,6 +212,22 @@
         max-height: 250px;
       }
     }
+
+    /* Placeholder sections styling */
+    .section-title {
+      font-size: 2em;
+      color: #66b2ff;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .section-content {
+      font-size: 1.2em;
+      color: #ddd;
+      text-align: center;
+      line-height: 1.6;
+    }
+
   </style>
 </head>
 
@@ -217,18 +240,19 @@
       <span></span>
     </div>
     <ul id="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About Me</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="Karate_acievements.html">Karate Achievements</a></li>
-      <li><a href="gymnastics.html">Gymnastics Coaching</a></li>
-      <li><a href="mentors.html">Inspirations</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="resume.html">Resume</a></li>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#karate">Karate Achievements</a></li>
+      <li><a href="#gymnastics">Gymnastics Coaching</a></li>
+      <li><a href="#inspirations">Inspirations</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#resume">Resume</a></li>
     </ul>
   </nav>
 
-  <section class="hero-section" aria-label="Hero section with introduction and image">
+  <!-- Hero / Home Section -->
+  <section id="home" class="hero-section" aria-label="Hero section with introduction and image">
     <div class="text-content" role="region" aria-live="polite">
       <h1>P. Muneeswari</h1>
       <p class="welcome-msg">Welcome to my professional portfolio, where technology meets discipline and passion.</p>
@@ -238,6 +262,48 @@
     </div>
 
     <img src="2D_08847.JPG" alt="Main portfolio image" class="main-img" />
+  </section>
+
+  <!-- About Me Section -->
+  <section id="about">
+    <h2 class="section-title">About Me</h2>
+    <p class="section-content">This section contains details about your technical skills, background, and personal journey.</p>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <h2 class="section-title">Projects</h2>
+    <p class="section-content">Showcase of your web development, DevOps, and other technical projects here.</p>
+  </section>
+
+  <!-- Karate Achievements Section -->
+  <section id="karate">
+    <h2 class="section-title">Karate Achievements</h2>
+    <p class="section-content">Include your Karate awards, experiences, and notable achievements.</p>
+  </section>
+
+  <!-- Gymnastics Section -->
+  <section id="gymnastics">
+    <h2 class="section-title">Gymnastics Coaching</h2>
+    <p class="section-content">Information about your coaching experience and students you have trained.</p>
+  </section>
+
+  <!-- Inspirations Section -->
+  <section id="inspirations">
+    <h2 class="section-title">Inspirations</h2>
+    <p class="section-content">Mentors, role models, and inspirations in your life.</p>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2 class="section-title">Contact</h2>
+    <p class="section-content">Your email, phone, or contact form can go here.</p>
+  </section>
+
+  <!-- Resume Section -->
+  <section id="resume">
+    <h2 class="section-title">Resume</h2>
+    <p class="section-content">Add a downloadable resume link or summary here.</p>
   </section>
 
   <script>
@@ -250,7 +316,7 @@
     });
 
     // Typing effect
-    const taglines = ["DevOps Enthusiast | Gymnastics Coach "];
+    const taglines = ["DevOps Enthusiast | Gymnastics Coach"];
     let index = 0;
     let charIndex = 0;
     let isDeleting = false;
